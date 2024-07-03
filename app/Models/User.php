@@ -52,9 +52,9 @@ class User extends Authenticatable
      *
      * @return  array<string, string>|string
      */
-    public function routeNotificationForMail(Notification $notification): array|string
-    {
-        $admin = $this->where('role', 'admin')->first();
-        return [$admin->email => $admin->name];
-    }
-}
+//     public function routeNotificationForMail(Notification $notification): array|string
+//     {
+//         $admin = $this->where('role', 'admin')->first();
+//         return [$admin->email => $admin->name];
+//     }
+ }

@@ -22,11 +22,11 @@ Route::get('/job/create', function () {
     return view('job.job_create');
 })->name('job.create');
 
+Route::post('job/create', [JobController::class,'store'])->name('job.create');
+
 Route::group([
     'middleware' => AdminMiddleware::class
 ], function () {
-
-    Route::post('job/create', [JobController::class,'store'])->name('job.create');
 
     Route::get('/admin_dashboard', [AdminController::class,'index'])->name('admin.index');
 
